@@ -8,18 +8,18 @@ The goal of the project is to create a Leader-Follower based robot simulation. T
 
 The code consists of three main blocks:
 
-**Coordinator**
+**Coordinator:**
 This is responsible for spawning new follower robots. A coordinator is defined as an inivisble process in the project configuration since it should not be visible in the simulation. Each follower agent is created periodically for every 5 seconds and the maximum number of robots that can be created in the current code is 15. This number can be changed in coordinator.h. However, with increase in number of robots, there is a greater chance to see collisions amongst the robots. However the robots would be ultimately able to follow its parent.
 
-**Leader**
+**Leader:**
 The leader robot is responsbile for all follower robots. Its main job is to guide the robots that are following it. The leader bot must slow down in case of obstacles that it encounters in the course and it must also emit an event which informs the first follower robot behind it about its current coordinates.
 
-**Follower**
+**Follower:**
 The follower robot watches for the cooridinates of the parent robot and also emits its own coordinates thorugh an event to the child robot that was spawned using the coordinator.
 
 ## Key Challenges
 
-**Physics behind the robots**
+**Physics behind the robots:**
 One of the most challenging task was to determine the Linear velocity, Angular velocity, Force, Torque, Friction and Mass of the robots. It required multiple trials to arrive at ideal values to ensure that the robots actually followed a loopy path.
 
 **Handling Collisions**
@@ -48,6 +48,9 @@ I had to try out multiple versions of Enviro to finally settle down at v1.61. Th
 ## Acknowledgments
 
 The project used packages provided by [ENVIRO](https://github.com/klavinslab/enviro/) and [ELMA](https://github.com/klavinslab/elma).
-The docker image used was provided by [Klavins](https://github.com/klavinslab)
-The reference code that I followed to implement my project is [Spawner](https://github.com/klavinslab/enviro/tree/master/examples/spawner/)
+
+The docker image used was provided by [Klavins](https://github.com/klavinslab).
+
+The reference code that I followed to implement my project is [Spawner](https://github.com/klavinslab/enviro/tree/master/examples/spawner/).
+
 I would like to give a shoutout to Sourav Jena, my classmate for helping me figure out the correct dynamic properties for the follower robots that were spawned.
