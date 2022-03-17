@@ -17,15 +17,17 @@ The leader robot is responsbile for all follower robots. Its main job is to guid
 **Follower:**
 The follower robot watches for the cooridinates of the parent robot and also emits its own coordinates thorugh an event to the child robot that was spawned using the coordinator.
 
+![alt text](https://github.com/vishnukarthik-1994/hyperloop-bot/blob/main/gif/hyperloop_bot.gif)
+
 ## Key Challenges
 
 **Physics behind the robots:**
 One of the most challenging task was to determine the Linear velocity, Angular velocity, Force, Torque, Friction and Mass of the robots. It required multiple trials to arrive at ideal values to ensure that the robots actually followed a loopy path.
 
-**Handling Collisions**
+**Handling Collisions:**
 Another major aspect that I had to deal with is to handle collisions when new robots are spawned. This required that all the robots slowed down and maintain a safe distance when a new robot was about to collide with them
 
-**Version Selection**
+**Version Selection:**
 I had to try out multiple versions of Enviro to finally settle down at v1.61. There were a lot of segmentation faults that I encountered when I used previous versions. Also some features like invisible process and references were not supported in older versions.
 
 
