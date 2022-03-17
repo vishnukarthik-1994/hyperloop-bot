@@ -39,7 +39,7 @@ I had to try out multiple versions of Enviro to finally settle down at v1.61. Th
 
 1. Open the command prompt
 2. git clone https://github.com/vishnukarthik-1994/hyperloop-bot.git
-3. cd project
+3. cd hyperloop-bot/project/
 4. docker run -p80:80 -p8765:8765 -v $PWD:/source -it klavins/enviro:v1.61 bash
 5. Now you must have entered the docker container
 6. esm start
